@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <div>
         <NavigationBar/>
-     
+      
+    
       <Routes>
         <Route path="matches" element={<Matches />} />
         <Route path="schedules" element={<Schedules/>}/>

@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Schedules() {
+
+
   return (
     <div>
       <h1>Welcome to Schedule Page</h1>
