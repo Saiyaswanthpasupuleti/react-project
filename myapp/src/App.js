@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { Mainfile } from './components/mainPage';
 
 function App() {
   return (
     <div className="App">
-     <h1>hai</h1>
+     <Mainfile/>
     </div>
   );
 }
