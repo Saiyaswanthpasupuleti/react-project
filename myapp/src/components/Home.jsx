@@ -11,13 +11,14 @@ import Players from "./Players";
 import News from "./News";
 import Stats from "./Stats";
 export default function Home() {
+  
   return (
     <div>
         <NavigationBar/>
       
     
       <Routes>
-        <Route path="matches" element={<Matches />} />
+        <Route path="matches/*" element={<Matches />} />
         <Route path="schedules" element={<Schedules/>}/>
         <Route path="series" element={<Series/>}/>
         <Route path="teams" element={<Teams/>}/>
