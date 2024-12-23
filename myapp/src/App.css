@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css or another CSS file */
+.link {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.route-enter {
+  opacity: 0;
+}
+
+.route-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.route-exit {
+  opacity: 1;
+}
+
+.route-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}

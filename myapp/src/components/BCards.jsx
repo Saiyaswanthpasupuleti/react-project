@@ -13,7 +13,7 @@ function BasicExample(props) {
         </Card.Text>
 
         <Button variant="success">
-          <Link to={props.link} className="nav-link text-light">
+          <Link to={props.link} className="nav-link text-light" >
             {props.text}
           </Link>
         </Button>
