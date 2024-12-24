@@ -1,0 +1,42 @@
+/* News.css */
+.news-container {
+    padding: 30px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .news-title {
+    color: #006400; /* Dark green color */
+    font-weight: bold;
+  }
+  
+  .news-card {
+    border: 2px solid #006400; /* Dark green border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1); /* Green shadow */
+    overflow: hidden;
+    transition: transform 0.2s; /* Smooth hover effect */
+    background-color: #f8fff4; /* Light green background */
+  }
+  
+  .news-card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 8px rgba(0, 128, 0, 0.2);
+  }
+  
+  .news-card-title {
+    color: #006400; /* Dark green title text */
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .news-card-text {
+    font-size: 1rem;
+    color: #333333; /* Neutral dark color for text */
+  }
+  
+  .news-card-footer {
+    font-size: 0.85rem;
+    color: #555555; /* Muted color for footer text */
+    text-align: right;
+  }
+  

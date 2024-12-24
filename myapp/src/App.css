@@ -64,3 +64,54 @@
   opacity: 0;
   transition: opacity 300ms ease-in;
 }
+/* Add hover effects to cards */
+.upcoming-matches-container .card {
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.upcoming-matches-container .card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0 8px 15px rgba(0, 128, 0, 0.2); /* Adds a larger shadow */
+  border-color: darkgreen; /* Changes border color on hover */
+}
+
+/* Title styling */
+.upcoming-matches-container .card-title {
+  font-size: 1.25rem;
+  transition: color 0.3s; /* Smooth color change */
+}
+
+.upcoming-matches-container .card-title:hover {
+  color: darkgreen; /* Slightly darker green when hovered */
+}
+
+/* Subtitle styling */
+.upcoming-matches-container .card-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Text styling */
+.upcoming-matches-container .card-text {
+  line-height: 1.5;
+}
+
+/* Overall card container */
+.upcoming-matches-container .card-body {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 10px;
+}
+
+/* Row styling */
+.upcoming-matches-container .row {
+  margin: 0 auto;
+}
+
+/* Title section */
+.upcoming-matches-container h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Slightly more spacing between letters */
+}

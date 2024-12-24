@@ -10,6 +10,7 @@ import Venues from "./Venues";
 import Players from "./Players";
 import News from "./News";
 import Stats from "./Stats";
+import UpcomingMatches from "./Upcomingmatches";
 export default function Home() {
   
   return (
@@ -18,7 +19,11 @@ export default function Home() {
       
     
       <Routes>
-        <Route path="matches/*" element={<Matches />} />
+        <Route path="matches/*" element={<Matches />}>
+          {/* <Route path="Upcoming" element={<UpcomingMatches/>} /> */}
+        
+        
+        </Route>
         <Route path="schedules" element={<Schedules/>}/>
         <Route path="series" element={<Series/>}/>
         <Route path="teams" element={<Teams/>}/>
@@ -28,7 +33,9 @@ export default function Home() {
         <Route path="players" element={<Players/>}/>
         <Route path="news" element={<News/>}/>
         <Route path="stats" element={<Stats/>}/>
+      
       </Routes>
+      {/* <h1>Welcome to home page</h1> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import BootSpinner from "./spinner";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import "../App.css"
 export default function UpcomingMatches() {
   const [matches, setMatches] = useState([]);
 
@@ -31,31 +31,54 @@ export default function UpcomingMatches() {
   }, []);
 
   return (
-    <div className="upcoming-matches-container">
-      {/* <h3 className="text-center mb-4">Upcoming Matches</h3> */}
+    <div className="upcoming-matches-container" style={{ padding: "20px" }}>
+      <h3 className="text-center mb-4" style={{ color: "green", fontWeight: "bold" }}>
+        Upcoming Matches
+      </h3>
       {matches.length === 0 ? (
         <BootSpinner />
       ) : (
         <Row xs={1} md={2} lg={3} className="g-4">
           {matches.map((match, index) => (
-            match.matchList && match.matchList.length > 0 && match.matchList.map((matchItem, itemIndex) => (
+            match.matchList &&
+            match.matchList.length > 0 &&
+            match.matchList.map((matchItem, itemIndex) => (
               <Col key={itemIndex}>
-                <Card className="h-100">
+                <Card
+                  className="h-100"
+                  style={{
+                    border: "2px solid green", // Green border
+                    borderRadius: "10px", // Slightly rounded corners
+                    boxShadow: "0 4px 6px rgba(0, 128, 0, 0.1)", // Subtle shadow
+                  }}
+                >
                   <Card.Body>
-                    <Card.Title className="text-primary">
+                    <Card.Title
+                      style={{
+                        color: "green", // Green title
+                        fontWeight: "bold",
+                      }}
+                    >
                       {matchItem.matchTitle}
                     </Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">
+                    <Card.Subtitle
+                      className="mb-2"
+                      style={{ color: "darkgreen", fontStyle: "italic" }}
+                    >
                       {match.seriesName}
                     </Card.Subtitle>
                     <Card.Text>
-                      <strong>Venue:</strong> {matchItem.matchVenue}
+                      <strong style={{ color: "green" }}>Venue:</strong>{" "}
+                      {matchItem.matchVenue}
                       <br />
-                      <strong>Date:</strong> {matchItem.matchDate}
+                      <strong style={{ color: "green" }}>Date:</strong>{" "}
+                      {matchItem.matchDate}
                       <br />
-                      <strong>Time:</strong> {matchItem.matchTime}
+                      <strong style={{ color: "green" }}>Time:</strong>{" "}
+                      {matchItem.matchTime}
                       <br />
-                      <strong>Status:</strong> {matchItem.currentStatus}
+                      <strong style={{ color: "green" }}>Status:</strong>{" "}
+                      {matchItem.currentStatus}
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -64,6 +87,7 @@ export default function UpcomingMatches() {
           ))}
         </Row>
       )}
+      <img src="./"></img>
     </div>
   );
 }

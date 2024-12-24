@@ -1,0 +1,26 @@
+/* Add hover effects to cards */
+.teams-container .card {
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .teams-container .card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: 0 8px 15px rgba(0, 128, 0, 0.2); /* Adds a larger shadow */
+    border-color: darkgreen; /* Changes border color on hover */
+  }
+  
+  /* Title styling */
+  .teams-container .card-title {
+    font-size: 1.25rem;
+    transition: color 0.3s; /* Smooth color change */
+  }
+  
+  .teams-container .card-title:hover {
+    color: darkgreen; /* Slightly darker green when hovered */
+  }
+  
+  /* Container spacing */
+  .teams-container {
+    padding: 20px;
+  }
+  
