@@ -64,49 +64,7 @@
   opacity: 0;
   transition: opacity 300ms ease-in;
 }
-/* Add hover effects to cards */
-.upcoming-matches-container .card {
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-}
 
-.upcoming-matches-container .card:hover {
-  transform: scale(1.05); /* Slightly enlarges the card */
-  box-shadow: 0 8px 15px rgba(0, 128, 0, 0.2); /* Adds a larger shadow */
-  border-color: darkgreen; /* Changes border color on hover */
-}
-
-/* Title styling */
-.upcoming-matches-container .card-title {
-  font-size: 1.25rem;
-  transition: color 0.3s; /* Smooth color change */
-}
-
-.upcoming-matches-container .card-title:hover {
-  color: darkgreen; /* Slightly darker green when hovered */
-}
-
-/* Subtitle styling */
-.upcoming-matches-container .card-subtitle {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Text styling */
-.upcoming-matches-container .card-text {
-  line-height: 1.5;
-}
-
-/* Overall card container */
-.upcoming-matches-container .card-body {
-  padding: 20px;
-  background-color: #f9f9f9; /* Light background color */
-  border-radius: 10px;
-}
-
-/* Row styling */
-.upcoming-matches-container .row {
-  margin: 0 auto;
-}
 
 /* Title section */
 .upcoming-matches-container h3 {
@@ -115,3 +73,52 @@
   text-transform: uppercase; /* Uppercase for emphasis */
   letter-spacing: 1px; /* Slightly more spacing between letters */
 }
+
+
+
+/* App.css */
+.upcoming-matches-container {
+  padding: 30px;
+  background-color: #ffffff; /* White background */
+}
+
+.upcoming-title {
+  color: #006400; /* Dark green title */
+  font-weight: bold;
+}
+
+.match-card {
+  border: 2px solid #006400; /* Dark green border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1); /* Subtle green shadow */
+  overflow: hidden;
+  background-color: #f8fff4; /* Light green background */
+  transition: transform 0.2s;
+}
+
+.match-card:hover {
+  transform: scale(1.02); /* Zoom on hover */
+  box-shadow: 0 6px 8px rgba(0, 128, 0, 0.2);
+}
+
+.match-card-title {
+  color: #006400; /* Dark green title */
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.match-card-subtitle {
+  color: #2e8b57; /* Sea green subtitle */
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.match-card-text {
+  font-size: 1rem;
+  color: #333333; /* Neutral text color */
+}
+
+.match-card-text strong {
+  color: #006400; /* Dark green for labels */
+}
+

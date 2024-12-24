@@ -4,7 +4,7 @@ import BootSpinner from "./spinner";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "../App.css"
+
 export default function UpcomingMatches() {
   const [matches, setMatches] = useState([]);
 
@@ -33,7 +33,7 @@ export default function UpcomingMatches() {
   return (
     <div className="upcoming-matches-container" style={{ padding: "20px" }}>
       <h3 className="text-center mb-4" style={{ color: "green", fontWeight: "bold" }}>
-        Upcoming Matches
+        Upcoming Matches  🏏
       </h3>
       {matches.length === 0 ? (
         <BootSpinner />
