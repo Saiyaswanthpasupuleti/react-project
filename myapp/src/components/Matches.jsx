@@ -1,19 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './css/Matches.css'; // Import the CSS file
+import './css/Matches.css'; 
+import NavigationBar from "./navbar";
 
 export default function Matches() {
   return (
     <div className="match-card-container">
-      {/* Upcoming Match Card */}
-      <Link to="Upcomingmatches" className="match-card upcoming-matches">
-        Upcoming Matches
-      </Link>
+      <div style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",height:"100vh"}}>
+      <h1  className="text-success">Matches 🏏</h1>
+  
+  <Link to="Upcomingmatches" className="match-card upcoming-matches">
+          Upcoming Matches
+        </Link>
 
-      {/* Live Match Card */}
-      <Link to="LiveMatches" className="match-card live-matches">
-        Live Matches
-      </Link>
+      </div>
+
+
+
+
+      
     </div>
   );
 }

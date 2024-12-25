@@ -1,22 +1,15 @@
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
 
 function ShapeExample(props) {
   return (
-    <Container style={{display:"flex",justifyContent:"center",alignItems:"center",height:"auto"}}>
+    <Container className="image-container">
       <Row>
-      <Col xs={6} md={4}>
-          <Image src={props.image} rounded />
+        <Col>
+          <Image src={props.image} rounded className="team-image" />
         </Col>
-       
-        {/* <Col xs={6} md={4}>
-          <Image src={props.image} thumbnail />
-        </Col> */}
-        {/* <Col xs={6} md={4}>
-          <Image  src={props.image} roundedCircle />
-        </Col> */}
       </Row>
     </Container>
   );

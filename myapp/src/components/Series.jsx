@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 export default function Series() {
   const [series, setSeries] = useState([]);
@@ -30,35 +31,27 @@ export default function Series() {
   }, []);
 
   return (
-    <div className="series-container">
-      <h3 className="text-center mb-4 upcoming-title">Cricket Series 🏏</h3>
-      {series.length === 0 ? (
-        <p className="text-center loading-text">Loading...</p>
-      ) : (
-        <Row xs={1} md={2} lg={3} className="g-4">
-          {series.map((seriesItem, index) => (
-            <Col key={index} className="d-flex">
-              <Card className="series-card w-100">
-                <Card.Body>
-                  <Card.Title className="series-card-title">
-                    Series Date: {seriesItem.date}
-                  </Card.Title>
-                  {seriesItem.seriesList.map((listItem, listIndex) => (
-                    <div key={listIndex} className="series-details">
-                      <Card.Subtitle className="series-card-subtitle">
-                        {listItem.seriesName}
-                      </Card.Subtitle>
-                      <Card.Text>
-                        <strong>Start Date:</strong> {listItem.seriesDate}
-                      </Card.Text>
-                    </div>
-                  ))}
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      )}
+    <div className="series-container" style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",alignItems:"center",gap:"30px",height:"100vh"}}>
+
+<h3 className="text-center mb-4 upcoming-title">Cricket Series 🏏</h3>
+
+<Link to="internationalseries" className="match-card upcoming-matches">
+              International Series
+            </Link>
+            <Link to="domesticseries" className="match-card upcoming-matches">
+              Domestic Series
+            </Link>
+            <Link to="leaguesseries" className="match-card upcoming-matches">
+              Leagues Series
+            </Link>
+            <Link to="womenseries" className="match-card upcoming-matches">
+              Women Series
+            </Link>
+
+
+
+
+           
     </div>
   );
 }

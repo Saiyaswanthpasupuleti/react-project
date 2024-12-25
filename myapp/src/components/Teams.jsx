@@ -4,8 +4,10 @@ import ShapeExample from './Playes-Images-photos';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './Teams.css'; // Import CSS for additional styles
+
 import BootSpinner from './spinner';
+import NavigationBar from './navbar';
+import { Link } from 'react-router-dom';
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
@@ -58,49 +60,21 @@ export default function Teams() {
   }, []);
 
   return (
-    <div className="teams-container" style={{ padding: '30px' }}>
-      <h3 className="text-center mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
-        Teams
-      </h3>
-      {loading ? (
-        <div className="text-center"> <BootSpinner/></div>
-      ) : (
-        <Row xs={1} md={2} lg={3} className="g-4">
-          {teams.map((team, index) => (
-            <Col key={index} className="d-flex align-items-stretch">
-              <Card
-                style={{
-                  border: '2px solid green',
-                  borderRadius: '10px',
-                  boxShadow: '0 4px 6px rgba(0, 128, 0, 0.1)',
-                  overflow: 'hidden',
-                  transition: 'transform 0.2s', // Add transition for hover effect
-                }}
-                className="team-card flex-grow-1" // Add a class for additional styling
-              >
-                <div style={{ textAlign: 'center', padding: '10px' }}>
-                  <ShapeExample image={team.image} />
-                </div>
-                <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                  <Card.Title
-                    style={{
-                      color: 'green',
-                      fontWeight: 'bold',
-                      fontSize: '1.25rem',
-                    }}
-                  >
-                    {team.title}
-                  </Card.Title>
-                  <Card.Text style={{ fontSize: '1rem' }}>
-                    <strong style={{ color: 'green' }}>Team ID:</strong> {team.id}
-                    <br />
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      )}
+    <div style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",alignItems:"center",gap:"30px",height:"100vh"}}>
+   
+      <h3 className="text-center mb-4 upcoming-title">Teams List 🏏</h3>
+                <Link to="internationlist" className="match-card upcoming-matches">
+                    Internation list
+                  </Link>
+                  <Link to="domesticlist" className="match-card upcoming-matches">
+                    Domestic list
+                  </Link>
+                  <Link to="leaugelist" className="match-card upcoming-matches">
+                    Leauge list
+                  </Link>
+                  <Link to="womenlist" className="match-card upcoming-matches">
+                    Women list
+                  </Link>
     </div>
   );
 }

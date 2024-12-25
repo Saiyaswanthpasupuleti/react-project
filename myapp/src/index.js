@@ -3,18 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UpcomingMatches from './components/Upcomingmatches';
 import { Login } from './components/login';
-import RandomCircles from './components/Circle';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <App/>
-  {/* <Login/> */}
-  {/* <UpcomingMatches/> */}
-  {/* <RandomCircles/> */}
+ 
   </React.StrictMode>
 );
 

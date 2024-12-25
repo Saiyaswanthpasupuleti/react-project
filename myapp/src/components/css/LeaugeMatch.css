@@ -1,0 +1,92 @@
+/* Main container for the League Matches section */
+.intl-match-card-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Heading for the League Matches */
+  .intl-matches-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007b3a; /* Dark green */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Wrapper for the match cards */
+  .intl-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  /* Style for each individual match card */
+  .intl-match-card {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1); /* Subtle shadow */
+    text-align: left;
+  }
+  
+  /* Match details */
+  .intl-match-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+  
+  .intl-match-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .intl-match-venue {
+    color: #2c6f2f;
+    font-size: 1rem;
+  }
+  
+  /* Spinner container styles */
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust based on your layout */
+  }
+  
+  /* Customize spinner if needed */
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25rem;
+  }
+  
+  /* International Series Info */
+  .intl-series-info h4 {
+    color: #006400; /* Dark green */
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .intl-series-info p {
+    color: #333; /* Dark text for better readability */
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .intl-match-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intl-card-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

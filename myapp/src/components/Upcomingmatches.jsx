@@ -4,6 +4,7 @@ import BootSpinner from "./spinner";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import "./css/UpcomingMatches.css";
 
 export default function UpcomingMatches() {
   const [matches, setMatches] = useState([]);
@@ -33,7 +34,7 @@ export default function UpcomingMatches() {
   return (
     <div className="upcoming-matches-container" style={{ padding: "20px" }}>
       <h3 className="text-center mb-4" style={{ color: "green", fontWeight: "bold" }}>
-        Upcoming Matches  🏏
+        Upcoming Matches 🏏
       </h3>
       {matches.length === 0 ? (
         <BootSpinner />
@@ -44,14 +45,7 @@ export default function UpcomingMatches() {
             match.matchList.length > 0 &&
             match.matchList.map((matchItem, itemIndex) => (
               <Col key={itemIndex}>
-                <Card
-                  className="h-100"
-                  style={{
-                    border: "2px solid green", // Green border
-                    borderRadius: "10px", // Slightly rounded corners
-                    boxShadow: "0 4px 6px rgba(0, 128, 0, 0.1)", // Subtle shadow
-                  }}
-                >
+                <Card className="h-100">
                   <Card.Body>
                     <Card.Title
                       style={{
@@ -87,7 +81,6 @@ export default function UpcomingMatches() {
           ))}
         </Row>
       )}
-      <img src="./"></img>
     </div>
   );
 }

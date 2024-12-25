@@ -1,0 +1,87 @@
+/* Custom styles for the Home component */
+
+/* Container styling */
+.container {
+    max-width: 1000px; /* Limit the container's max width */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Card styling */
+.card {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+    background-color: #ffffff; /* White background for cards */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover effect for card */
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d572c; /* Dark green color for card title */
+}
+
+/* Card Text */
+.card-text {
+    font-size: 1rem;
+    color: #333; /* Dark text color */
+}
+
+/* Small Text Styling */
+.card-text small {
+    color: #888; /* Muted color for the intro */
+}
+
+/* Heading Styling */
+h1 {
+    color: #2d572c; /* Keep green color for headings */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center; /* Center align heading */
+}
+
+/* Spinner positioning */
+.d-flex {
+    margin-top: 20px; /* Add some space above the spinner */
+}
+
+/* Green background for specific sections */
+.card-body {
+    background-color: #f1f8f2; /* Light green background for the card body */
+}
+
+/* Text Muted Styling for Intro */
+.card-text small {
+    color: #2d572c; /* Green for the intro */
+}
+
+/* Buttons with green border */
+button {
+    background-color: #2d572c; /* Green background for buttons */
+    color: white; /* White text on buttons */
+    border: 1px solid #2d572c; /* Border with green color */
+}
+
+button:hover {
+    background-color: white; /* White background on hover */
+    color: #2d572c; /* Green text on hover */
+}
+
+/* Green and white cards theme */
+.card-body {
+    background-color: #ffffff; /* Ensure the card body background is white */
+}
+
+.card-title, .card-text {
+    color: #2d572c; /* Use green for text */
+}
+
+/* Muted small text */
+.card-text small {
+    color: #888; /* Keep it muted for the smaller text */
+}

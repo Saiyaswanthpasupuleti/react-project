@@ -1,0 +1,62 @@
+/* Container for the domestic matches */
+.domestic-match-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Heading for the Domestic Matches */
+  .domestic-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Wrapper for match cards */
+  .domestic-match-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  /* Match card styles */
+  .domestic-match-card {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Match details */
+  .match-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+  
+  .match-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .match-venue {
+    color: #2c6f2f;
+    font-size: 1rem;
+  }
+  
+  /* Spinner container styles */
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust based on your layout */
+  }
+  
+  /* Customize spinner if needed */
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25rem;
+  }
+  

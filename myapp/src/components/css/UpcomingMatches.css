@@ -1,0 +1,74 @@
+/* Styling for the upcoming matches container */
+.upcoming-matches-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the container */
+    border-radius: 10px;
+  }
+  
+  h3 {
+    color: #007b3a; /* Dark green color for the heading */
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Styling for individual cards */
+  .card {
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* Card background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    position: relative; /* To control positioning */
+    overflow: hidden; /* Prevent content from overflowing during scaling */
+    transform-origin: center; /* Ensure scaling happens from the center */
+  }
+  
+  /* Hover effect on card */
+  .card:hover {
+    transform: scale(1.05); /* Slightly larger scale on hover */
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2); /* Larger shadow on hover */
+  }
+  
+  /* Styling for card body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Title and subtitle styles */
+  .card-title {
+    color: #007b3a; /* Green title */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .card-subtitle {
+    color: #006400; /* Dark green for the subtitle */
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    color: #333; /* Dark text for better readability */
+    font-size: 1rem;
+  }
+  
+  .card-text strong {
+    color: #007b3a; /* Green for the labels */
+  }
+  
+  .card-body br {
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive styles for different screen sizes */
+  @media (max-width: 576px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  
+    .card-body {
+      padding: 15px;
+    }
+  }
+  
