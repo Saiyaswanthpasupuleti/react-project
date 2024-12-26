@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import './News.css'; // Import CSS for additional styles
+import ShapeExample from './Playes-Images-photos';
+import BootSpinner from './spinner';
+import './News.css';
 
 export default function News() {
   const [news, setNews] = useState([]);
@@ -13,21 +12,20 @@ export default function News() {
     const handleNews = async () => {
       const options = {
         method: 'GET',
-        url: 'https://crickbuzz-official-apis.p.rapidapi.com/news',
-        params: { lastId: '127528' },
+        url: 'https://cricket-live-line1.p.rapidapi.com/news',
         headers: {
           'x-rapidapi-key': '7ae981e42amsh872b0f8b9fa9783p1d2701jsn96e941a8c85f',
-          'x-rapidapi-host': 'crickbuzz-official-apis.p.rapidapi.com',
-        },
+          'x-rapidapi-host': 'cricket-live-line1.p.rapidapi.com'
+        }
       };
 
       try {
         const response = await axios.request(options);
-        setNews(response.data.storyList);
+        setNews(response.data.data);
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error(error);
-      } finally {
-        setLoading(false);
+        setLoading(false); // Ensure loading is false even if there is an error
       }
     };
 
@@ -40,27 +38,17 @@ export default function News() {
         Cricket News 🏏
       </h3>
       {loading ? (
-        <div className="text-center">Loading...</div>
+        <BootSpinner />
       ) : (
-        <Row xs={1} md={2} lg={3} className="g-4">
-          {news.map((item, index) => (
-            <Col key={index} className="d-flex align-items-stretch">
-              <Card className="news-card flex-grow-1">
-                <Card.Body>
-                  <Card.Title className="news-card-title">
-                    {item.story.hline}
-                  </Card.Title>
-                  <Card.Text className="news-card-text">
-                    {item.story.intro}
-                  </Card.Text>
-                  <Card.Footer className="news-card-footer">
-                    Published on: {item.story.pubTime}
-                  </Card.Footer>
-                </Card.Body>
-              </Card>
-            </Col>
+        <div className="news-list">
+          {news.map((a, index) => (
+            <div key={index} className="news-item">
+              <ShapeExample image={a.image} />
+              <h4 className="news-item-title">{a.title}</h4>
+              <p className="news-item-description">{a.description}</p>
+            </div>
           ))}
-        </Row>
+        </div>
       )}
     </div>
   );

@@ -35,7 +35,7 @@ export default function InternationTeamsList() {
 
   return (
     <div className="team-list-container">
-         <h1 className="intl-matches-heading">International Teams</h1>
+         <h1 className="intl-matches-heading">International Teams 🏏</h1>
      
       {isLoading ? (
         <div className="spinner-container">

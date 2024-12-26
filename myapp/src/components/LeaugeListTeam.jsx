@@ -35,7 +35,7 @@ export default function LeaugeListTeam() {
 
   return (
     <div className="team-list-container">
-              <h1 className="intl-matches-heading">League Teams</h1>
+              <h1 className="intl-matches-heading">League Teams 🏏</h1>
 
       
 

@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './Players.css'; // Import CSS for additional styles
+import BootSpinner from './spinner';
 
 export default function Players() {
   const [players, setPlayers] = useState([]);
@@ -38,10 +39,10 @@ export default function Players() {
   return (
     <div className="players-container" style={{ padding: '30px' }}>
       <h3 className="text-center mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
-        Players
+        Players 🏏
       </h3>
       {loading ? (
-        <div className="text-center">Loading...</div>
+        <BootSpinner/>
       ) : (
         <Row xs={1} md={2} lg={3} className="g-4">
           {players.map((player, index) => (

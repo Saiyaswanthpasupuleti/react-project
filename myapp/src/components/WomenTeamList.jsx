@@ -36,7 +36,7 @@ export default function WomenTeamList() {
   return (
     <div className="team-list-container">
   
-      <h1 className="intl-matches-heading">Womens Teams</h1>
+      <h1 className="intl-matches-heading">Womens Teams 🏏</h1>
 
 
       {isLoading ? (

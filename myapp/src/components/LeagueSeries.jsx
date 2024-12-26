@@ -28,7 +28,7 @@ export default function LeagueSeries() {
     },[])
   return (
     <div className="intl-match-card-container">
-      <h1 className="intl-matches-heading">Leauge Series</h1>
+      <h1 className="intl-matches-heading">Leauge Series 🏏</h1>
       <div className="intl-card-wrapper">
         {leauge.length === 0 ? (
           <BootSpinner/>

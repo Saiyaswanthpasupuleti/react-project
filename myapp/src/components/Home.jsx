@@ -9,10 +9,11 @@ import Teams from "./Teams";
 import Venues from "./Venues";
 import Players from "./Players";
 import News from "./News";
-import Stats from "./Stats";
+import Stats from "./Iccranking";
 import axios from "axios";
 import BootSpinner from "./spinner"; // Import the spinner component
 import "./css/Home.css"; // Custom CSS for Home
+import Iccranking from "./Iccranking";
 
 
 export default function Home() {
@@ -23,13 +24,12 @@ export default function Home() {
   useEffect(() => {
     const handleHome = async () => {
       const options = {
-        method: "GET",
-        url: "https://crickbuzz-official-apis.p.rapidapi.com/home",
+        method: 'GET',
+        url: 'https://crickbuzz-official-apis.p.rapidapi.com/home',
         headers: {
-          "x-rapidapi-key":
-            "7ae981e42amsh872b0f8b9fa9783p1d2701jsn96e941a8c85f",
-          "x-rapidapi-host": "crickbuzz-official-apis.p.rapidapi.com",
-        },
+          'x-rapidapi-key': 'b14026a447msh4a37530d0a62e93p1932ffjsnb6244e35e7f8',
+          'x-rapidapi-host': 'crickbuzz-official-apis.p.rapidapi.com'
+        }
       };
 
       try {
@@ -61,7 +61,7 @@ export default function Home() {
         <Route path="venues" element={<Venues />} />
         <Route path="players" element={<Players />} />
         <Route path="news" element={<News />} />
-        <Route path="stats" element={<Stats />} />
+        <Route path="iccranking" element={<Iccranking/>} />
       </Routes>
 
       <div className="container mt-4">

@@ -29,7 +29,7 @@ export default function Domestic() {
     },[])
   return (
     <div className="intl-match-card-container">
-      <h1 className="intl-matches-heading">Domestic Series</h1>
+      <h1 className="intl-matches-heading">Domestic Series 🏏</h1>
       <div className="intl-card-wrapper">
         {domSeries.length === 0 ? (
           <BootSpinner />

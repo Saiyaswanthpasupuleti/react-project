@@ -29,7 +29,7 @@ export default function WomenSeries() {
     },[])
   return (
     <div className="intl-match-card-container">
-      <h1 className="intl-matches-heading">Women Series</h1>
+      <h1 className="intl-matches-heading">Women Series 🏏</h1>
       <div className="intl-card-wrapper">
         {womenSeries.length === 0 ? (
           <BootSpinner/>

@@ -22,6 +22,10 @@ import InternationTeamsList from "./InternationTeamsList";
 import DomesticTeam from "./DomesticTeam";
 import LeaugeListTeam from "./LeaugeListTeam";
 import WomenTeamList from "./WomenTeamList";
+import Players from "./Players";
+import Venues from "./Venues";
+import News from "./News";
+import Iccranking from "./Iccranking";
 
 
 
@@ -69,6 +73,11 @@ export function Mainfile(){
                 <Route path="/home/teams/domesticlist" element={<DomesticTeam/>}></Route>
                 <Route path="/home/teams/leaugelist" element={<LeaugeListTeam/>}></Route>
                 <Route path="/home/teams/womenlist" element={<WomenTeamList/>}></Route>
+                <Route path="/home/players" element={<Players/>}></Route>
+                <Route path="/home/venues" element={<Venues/>}></Route>
+                <Route path="/home/news" element={<News/>}></Route>
+                
+                <Route path="/home/iccranking" element={<Iccranking/>}></Route>
                 
 
 

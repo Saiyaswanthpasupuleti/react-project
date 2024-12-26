@@ -31,7 +31,7 @@ export default function InternationalSeries() {
 
   return (
     <div className="intl-match-card-container">
-      <h1 className="intl-matches-heading">International Series</h1>
+      <h1 className="intl-matches-heading">International Series 🏏</h1>
       <div className="intl-card-wrapper">
         {series.length === 0 ? (
           <BootSpinner/>

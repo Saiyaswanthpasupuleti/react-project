@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,8 +7,12 @@ import { Link } from 'react-router-dom'; // Use Link from react-router-dom
 function NavigationBar() {
   return (
     <Navbar expand="lg" className="bg-success text-light">
-      <Container>
-        <Navbar.Brand className="text-warning"><Link to="/" className="text-warning" style={{textDecoration:"none",fontSize:"30px"}}>Cricbuzz</Link></Navbar.Brand>
+      <Container fluid>
+        <Navbar.Brand className="text-warning">
+          <Link to="/" className="text-warning" style={{ textDecoration: "none", fontSize: "30px" }}>
+            Cricbuzz
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -31,15 +34,13 @@ function NavigationBar() {
             <Link to="players" className="nav-link text-light">
               Players
             </Link>
+            <Link to="iccranking" className="nav-link text-light">
+              Icc ranking
+            </Link>
             <Link to="news" className="nav-link text-light">
               News
             </Link>
-            <Link to="photos" className="nav-link text-light">
-              Photos
-            </Link>
-            <Link to="stats" className="nav-link text-light">
-              Stats
-            </Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
