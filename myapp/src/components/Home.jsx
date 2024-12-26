@@ -27,10 +27,11 @@ export default function Home() {
         method: 'GET',
         url: 'https://crickbuzz-official-apis.p.rapidapi.com/home',
         headers: {
-          'x-rapidapi-key': 'b14026a447msh4a37530d0a62e93p1932ffjsnb6244e35e7f8',
+          'x-rapidapi-key': '07a690c8b6msha638ae486882591p1480a2jsn2aa2d018c153',
           'x-rapidapi-host': 'crickbuzz-official-apis.p.rapidapi.com'
         }
       };
+      
 
       try {
         const response = await axios.request(options);
