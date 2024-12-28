@@ -62,7 +62,7 @@ export default function Teams() {
   return (
     <div style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",alignItems:"center",gap:"30px",backgroundColor:"black",height:"100vh"}}>
    
-      <h3 className="text-center text-light mb-4 upcoming-title">Teams List 🏏</h3>
+      <h3 className="text-center text-success mb-4 upcoming-title">Teams List 🏏</h3>
                 <Link to="internationlist" className="match-card upcoming-matches">
                     Internation list
                   </Link>

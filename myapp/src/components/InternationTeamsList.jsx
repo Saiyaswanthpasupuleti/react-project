@@ -10,14 +10,14 @@ export default function InternationTeamsList() {
 
   useEffect(() => {
     const handleTeams = async () => {
-        const options = {
-            method: 'GET',
-            url: 'https://free-cricbuzz-cricket-api.p.rapidapi.com/cricket-teams',
-            headers: {
-              'x-rapidapi-key': '7ae981e42amsh872b0f8b9fa9783p1d2701jsn96e941a8c85f',
-              'x-rapidapi-host': 'free-cricbuzz-cricket-api.p.rapidapi.com'
-            }
-          };
+      const options = {
+        method: 'GET',
+        url: 'https://free-cricbuzz-cricket-api.p.rapidapi.com/cricket-teams',
+        headers: {
+          'x-rapidapi-key': '7ae981e42amsh872b0f8b9fa9783p1d2701jsn96e941a8c85f',
+          'x-rapidapi-host': 'free-cricbuzz-cricket-api.p.rapidapi.com',
+        },
+      };
 
       try {
         const response = await axios.request(options);
@@ -34,19 +34,19 @@ export default function InternationTeamsList() {
   }, []);
 
   return (
-    <div className="team-list-container">
-         <h1 className="intl-matches-heading">International Teams 🏏</h1>
-     
+    <div className="team-list-container" style={{ backgroundColor: 'black' }}>
+      <h1 className="intl-matches-heading text-success">International Teams 🏏</h1>
+
       {isLoading ? (
         <div className="spinner-container">
           <BootSpinner /> {/* Show spinner while loading */}
         </div>
       ) : (
-        <div className="team-card-wrapper">
+        <div className="team-card-wrapper"  style={{ backgroundColor: 'black' }}>
           {team.map((teamItem, index) => (
-            <div key={index} className="team-card">
+            <div key={index} className="team-card"  style={{ backgroundColor: 'black' }}>
               <ShapeExample image={teamItem.image} />
-              <p className="team-name">{teamItem.title}</p>
+              <p className="team-name text-light">{teamItem.title}</p>
             </div>
           ))}
         </div>

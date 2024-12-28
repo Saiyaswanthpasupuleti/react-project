@@ -41,7 +41,7 @@ export default function Players() {
 
     
     <div className="players-container" style={{ padding: '30px' }}>
-      <h3 className="text-center text-light mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
+      <h3 className="text-center text-success mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
         Players 🏏
       </h3>
       {loading ? (
@@ -60,10 +60,10 @@ export default function Players() {
                 }}
                 className="player-card flex-grow-1" // Add a class for additional styling
               >
-                <div style={{ textAlign: 'center', padding: '10px' }}>
+                <div style={{ textAlign: 'center', padding: '10px',backgroundColor:"black" }}>
                   <ShapeExample image={player.image} />
                 </div>
-                <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Card.Body style={{ display: 'flex', flexDirection: 'column',backgroundColor:"black", justifyContent: 'space-between' }}>
                   <Card.Title
                     style={{
                       color: 'green',
@@ -84,9 +84,10 @@ export default function Players() {
                     {player.Role}
                   </Card.Subtitle>
                   <Card.Text style={{ fontSize: '1rem' }}>
-                    <strong style={{ color: 'green' }}>Role:</strong> {player.Role}
-                    <br />
-                    <strong style={{ color: 'green' }}>Player ID:</strong> {player.id}
+                    <br/>
+                <p className='text-light'>    <strong style={{ color: 'green' }} >Role:</strong>{player.Role}</p>
+                 <p className='text-light'>  <strong style={{ color: 'green' }}>Player ID:</strong> {player.id}</p>
+                  
                     <br />
                   </Card.Text>
                 </Card.Body>

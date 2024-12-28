@@ -41,7 +41,7 @@ export default function Schedules() {
         className="text-center mb-4 text-success" 
         style={{ color: "green", fontWeight: "bold" }}
       >
-       Welcome to Scheduled Matches Page 🏏
+       Welcome to Schedule Page 🏏
       </h3>
      
       <Link to="internationalmatches" className="match-card upcoming-matches">

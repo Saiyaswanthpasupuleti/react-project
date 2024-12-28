@@ -1,63 +1,71 @@
 /* Container for the entire component */
 .team-list-container {
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  /* Heading styles */
-  .team-list-heading {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #2d572c; /* Dark green for the heading */
-  }
-  
-  /* Wrapper for cards */
-  .team-card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Reduced gap between cards */
-  }
-  
-  /* Individual card styles */
-  .team-card {
-    width: 200px; /* Reduced card size */
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Slightly smaller border radius */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .team-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Image in the card */
-  .team-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #2d572c; /* Dark green border below the image */
-  }
-  
-  /* Team name text */
-  .team-name {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #2d572c; /* Dark green for the text */
-    margin: 10px 0;
-  }
-  
-  /* Add a green panel at the bottom of the card */
-  .team-card::after {
-    content: "";
-    display: block;
-    height: 5px;
-    background-color: #2d572c; /* Green panel at the bottom */
-    width: 100%;
-  }
-  
+  padding: 20px;
+  background-color: black; /* Keep the container background color black */
+}
+
+/* Heading styles */
+.intl-matches-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2d572c; /* Dark green for the heading */
+}
+
+/* Wrapper for cards */
+.team-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black; /* Ensure background color remains black */
+  gap: 15px; /* Reduced gap between cards */
+}
+
+/* Individual card styles */
+.team-card {
+  width: 200px; /* Adjust card size */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: black; /* Keep card background color black */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image in the card */
+.team-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #2d572c; /* Dark green border below the image */
+}
+
+/* Team name text */
+.team-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2d572c; /* Dark green for the text */
+  margin: 10px 0;
+}
+
+/* Add a green panel at the bottom of the card */
+.team-card::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #2d572c; /* Green panel at the bottom */
+  width: 100%;
+}
+
+/* Spinner container */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen */
+}

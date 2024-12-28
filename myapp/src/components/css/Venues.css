@@ -1,83 +1,90 @@
 /* General Venues Container Styling */
 .venues-container {
-    padding: 20px;
-  
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for the whole container */
-    border-radius: 8px; /* Rounded corners for the container */
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Title Styling */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for the whole container */
+  border-radius: 8px; /* Rounded corners for the container */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Center the content inside the container */
+}
+
+/* Title Styling */
+.venues-title {
+  font-size: 2rem;
+  color: #2c3e50; /* Dark color for title */
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Spinner Styling */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* List of Venue Items */
+.venues-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dynamic grid layout */
+  gap: 20px;
+  margin-top: 20px;
+  justify-items: center; /* Center the items in the grid */
+}
+
+/* Individual Venue Item Styling */
+.venue-item {
+  width: 300px; /* Fixed width for all cards */
+  height: 400px; /* Fixed height for all cards */
+  padding: 20px; /* Padding for spacing inside the card */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for venue items */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid #27ae60; /* Green border for each venue item */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: space-between; /* Ensure there's space between the content */
+  text-align: center; /* Center the text inside each venue item */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Hover effect for venue items */
+.venue-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Slightly bigger shadow and darker */
+  border-color: #27ae60; /* Darker green on hover */
+}
+
+/* Venue Name Styling */
+.venue-name {
+  font-size: 1.2rem; /* Smaller font size */
+  font-weight: bold;
+  color: #27ae60; /* Green color for venue name */
+  margin-bottom: 10px;
+}
+
+/* Venue Place Styling */
+.venue-place {
+  font-size: 1rem;
+  color: #7f8c8d; /* Dark gray for the place */
+  line-height: 1.5;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 767px) {
   .venues-title {
-    font-size: 2rem;
-    color: #2c3e50; /* Dark color for title */
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  /* Spinner Styling */
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
-  }
-  
-  /* List of Venue Items */
-  .venues-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Individual Venue Item Styling */
-  .venue-item {
-   
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for venue items */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 2px solid #27ae60; /* Green border for each venue item */
-  }
-  
-  /* Hover effect for venue items */
-  .venue-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Slightly bigger shadow and darker */
-    border-color: #16a085; /* Darker green on hover */
-  }
-  
-  /* Venue Name Styling */
-  .venue-name {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: black; /* Green color for venue name */
-    margin-bottom: 10px;
-    text-align: center;
   }
-  
-  /* Venue Place Styling */
-  .venue-place {
+  .venue-name {
     font-size: 1rem;
-    color: #7f8c8d; /* Dark gray for the place */
-    line-height: 1.5;
-    text-align: center; /* Centered text for place */
   }
-  
-  /* Responsiveness for smaller screens */
-  @media (max-width: 767px) {
-    .venues-title {
-      font-size: 1.5rem;
-    }
-    .venue-name {
-      font-size: 1.2rem;
-    }
-    .venue-item {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for smaller screens */
-    }
+  .venue-item {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 300px; /* Ensure a max width */
+    height: 350px; /* Reduce height on smaller screens */
   }
-  
+}

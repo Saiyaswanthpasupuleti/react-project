@@ -34,9 +34,9 @@ export default function WomenTeamList() {
   }, []);
 
   return (
-    <div className="team-list-container">
+    <div className="team-list-container" style={{backgroundColor:"black"}}>
   
-      <h1 className="intl-matches-heading">Womens Teams 🏏</h1>
+      <h1 className="intl-matches-heading text-success">Womens Teams 🏏</h1>
 
 
       {isLoading ? (
@@ -46,9 +46,9 @@ export default function WomenTeamList() {
       ) : (
         <div className="team-card-wrapper">
           {team.map((a, index) => (
-            <div key={index} className="team-card">
+            <div key={index} className="team-card" style={{backgroundColor:"black"}}>
               <ShapeExample image={a.image} />
-              <p className="team-name">{a.title}</p>
+              <p className="team-name text-light">{a.title}</p>
             </div>
           ))}
         </div>

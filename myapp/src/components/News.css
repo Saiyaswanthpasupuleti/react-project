@@ -1,7 +1,7 @@
 /* General News Container Styling */
 .news-container {
   padding: 20px;
-  background-color: #f4f4f9;  /* Light background */
+  background-color: black;  /* Set to black for consistency */
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Light shadow for the whole container */
   border-radius: 8px; /* Rounded corners for the container */
@@ -10,7 +10,7 @@
 /* Title Styling */
 .news-title {
   font-size: 2rem;
-  color: #2c3e50;  /* Darker color for title */
+  color: #27ae60;  /* Green color for title */
   font-weight: bold;
   margin-top: 20px;
   text-align: center; /* Centering the title */
@@ -53,7 +53,7 @@
 .news-item-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: black;  /* Green color for the title */
+  color: black;  /* Black for readability */
   margin-bottom: 10px;
   text-align: center;
 }

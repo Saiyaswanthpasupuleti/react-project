@@ -1,50 +1,50 @@
-/* Container styling */
+/* Main Container */
 .shared-container {
     padding: 20px;
-    background-color: #f8f9fa; /* Light background for better readability */
+    background-color: #f9f9f9; /* Neutral light background */
   }
   
-  /* Custom Grid for Cards */
+  /* Custom Grid */
   .custom-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Add spacing between the cards */
+    gap: 20px;
     padding: 10px;
   }
   
   /* Card Styling */
   .custom-card {
-    background: #ffffff; /* White card background */
- 
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden; /* Ensures the content stays inside the card */
+    background: #ffffff;
+    border: 2px solid #28a745; /* Uniform border color for consistency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   
-  /* Hover effect */
+  /* Hover Effects */
   .custom-card:hover {
-    transform: translateY(-5px); /* Slight upward movement */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
   
   /* Card Content */
   .card-body {
-    padding: 20px;
+    padding: 15px;
   }
   
   .card-title {
     font-size: 1.2rem;
-    color: #28a745;
+    color: #007bff; /* Uniform blue color */
     margin-bottom: 10px;
     font-weight: bold;
   }
   
   .series-info {
-    margin-bottom: 15px; /* Add spacing between series info blocks */
+    margin-bottom: 10px;
   }
   
   .card-subtitle {

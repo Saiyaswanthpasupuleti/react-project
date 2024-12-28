@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import "./css/Icc.css";
+import './css/Icc.css';
 import BootSpinner from './spinner';
 
 export default function Iccranking() {
@@ -15,12 +15,12 @@ export default function Iccranking() {
         url: 'https://cricbuzz-cricket2.p.rapidapi.com/stats/v1/rankings/teams',
         params: {
           isWomen: '0',
-          formatType: 't20'
+          formatType: 't20',
         },
         headers: {
           'x-rapidapi-key': '7ae981e42amsh872b0f8b9fa9783p1d2701jsn96e941a8c85f',
-          'x-rapidapi-host': 'cricbuzz-cricket2.p.rapidapi.com'
-        }
+          'x-rapidapi-host': 'cricbuzz-cricket2.p.rapidapi.com',
+        },
       };
 
       try {
@@ -28,12 +28,12 @@ export default function Iccranking() {
         console.log(response.data); // Check the full response data
 
         if (response.data && response.data.rank) {
-          Setranking(response.data.rank);  // Update state with fetched data
+          Setranking(response.data.rank); // Update state with fetched data
         } else {
-          console.log("No ranking data found");
+          console.log('No ranking data found');
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       } finally {
         Setloading(false); // Set loading to false after the request is done
       }
@@ -43,14 +43,13 @@ export default function Iccranking() {
   }, []); // Empty dependency array to run this effect once when the component mounts
 
   return (
-   
     <div className="container" style={{ maxWidth: '80%', marginTop: '30px' }}>
-      <h1 className='text-dark'>Icc Rankings 🏏</h1>
+      <h1 className="text-success">Icc Rankings 🏏</h1>
       {loading ? (
         <BootSpinner />
       ) : (
-        <Table responsive="sm" className="table-bordered table-striped table-hover">
-          <thead className="bg-success text-white">
+        <Table responsive="sm" className="table-bordered table-striped table-hover" striped bordered hover variant="dark">
+          <thead className="bg-dark text-success">
             <tr>
               <th>S.no</th>
               <th>Name</th>
@@ -69,7 +68,7 @@ export default function Iccranking() {
               </tr>
             ) : (
               ranking.map((a, b) => (
-                <tr key={b} className={b % 2 === 0 ? 'bg-light' : 'bg-success text-white'}>
+                <tr key={b} className={b % 2 === 0 ? 'bg-dark text-light' : 'bg-light text-light'}>
                   <td>{b + 1}</td>
                   <td>{a.name}</td>
                   <td>{a.matches}</td>

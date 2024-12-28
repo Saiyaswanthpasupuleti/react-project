@@ -8,7 +8,7 @@ function ShapeExample(props) {
     <Container className="image-container">
       <Row>
         <Col>
-          <Image src={props.image} rounded className="team-image" height="100px" />
+          <Image  src={props.image} rounded className="team-image" height="100px" />
         </Col>
       </Row>
     </Container>

@@ -33,18 +33,18 @@ export default function News() {
   }, []);
 
   return (
-    <div className="news-container">
-      <h3 className="text-center mb-4 news-title">
+    <div className="news-container" style={{backgroundColor:"black"}}>
+      <h3 className="text-center mb-4 news-title text-success">
         Cricket News 🏏
       </h3>
       {loading ? (
         <BootSpinner />
       ) : (
-        <div className="news-list">
+        <div className="news-list text-center" >
           {news.map((a, index) => (
-            <div key={index} className="news-item">
+            <div key={index} className="news-item" style={{backgroundColor:"black"}}>
               <ShapeExample image={a.image} />
-              <h4 className="news-item-title">{a.title}</h4>
+              <h4 className="news-item-title" style={{color:"white",margin:"10px",fontSize:"17px"}}>{a.title}</h4>
               <p className="news-item-description">{a.description}</p>
             </div>
           ))}

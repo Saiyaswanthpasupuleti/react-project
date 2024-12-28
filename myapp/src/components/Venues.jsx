@@ -34,13 +34,13 @@ export default function Venues() {
 
   return (
     <div className="venues-container">
-      <h1 className="text-center mb-4 venues-title">Venues 🏏</h1>
+      <h1 className="text-center mb-4 venues-title">Welcome to Venues Page🏏</h1>
       <div className="venues-list">
         {venue.map((a, index) => (
           <div key={index} className="venue-item">
             <ShapeExample image={a.image} />
-            <p className="venue-name">Name: {a.name}</p>
-            <p className="venue-place">Place: {a.place}</p>
+            <p className="venue-name text-success" style={{fontSize:"17px"}}>Name: {a.name}</p>
+            <p className="venue-place text-light">Place: {a.place}</p>
           </div>
         ))}
       </div>

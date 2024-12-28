@@ -34,8 +34,8 @@ export default function LeaugeListTeam() {
   }, []);
 
   return (
-    <div className="team-list-container">
-              <h1 className="intl-matches-heading">League Teams 🏏</h1>
+    <div className="team-list-container" style={{backgroundColor:"black"}}>
+              <h1 className="intl-matches-heading text-success">League Teams 🏏</h1>
 
       
 
@@ -46,9 +46,9 @@ export default function LeaugeListTeam() {
       ) : (
         <div className="team-card-wrapper">
           {leauge.map((a, index) => (
-            <div key={index} className="team-card">
+            <div key={index} className="team-card" style={{backgroundColor:"black"}}>
               <ShapeExample image={a.image} />
-              <p className="team-name">{a.title}</p>
+              <p className="team-name text-light">{a.title}</p>
             </div>
           ))}
         </div>

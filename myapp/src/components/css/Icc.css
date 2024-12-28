@@ -1,51 +1,49 @@
-/* Center the table and limit the width */
+/* Style the table container */
 .table-container {
-    max-width: 80%; /* Keeps the table width within 80% of the screen */
-    margin: 30px auto; /* Centers the table and adds top margin */
-    padding: 15px; /* Adds padding around the table */
+  max-width: 80%; /* Keeps the table width within 80% of the screen */
+  margin: 30px auto; /* Centers the table and adds top margin */
+  padding: 15px; /* Adds padding around the table */
+}
+
+/* Style for the table itself */
+.table-bordered {
+  border: 1px solid #28a745; /* Green border for table cells */
+  background-color: black; /* Black background for the table */
+}
+
+/* Header Style */
+.table thead {
+  background-color: black; /* Black background for header */
+  color: white; /* Green text for header */
+}
+
+/* Table cell text and background */
+.table th, .table td {
+  text-align: center; /* Center-align table text */
+  vertical-align: middle; /* Vertically center the content */
+  padding: 12px; /* Adds padding to cells for better readability */
+  color: white; /* Green text color */
+  border: 1px solid #28a745; /* Green borders for each cell */
+}
+
+/* Alternating row colors */
+.table tbody tr:nth-child(even) {
+  background-color: #222; /* Darker black/gray for even rows */
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #333; /* Slightly lighter dark color for odd rows */
+  color: white; /* Green text for odd rows */
+}
+
+/* Hover effect for rows */
+.table-hover tbody tr:hover {
+  background-color: #444 !important; /* Darker background on hover */
+}
+
+/* Additional styling to ensure the table looks nice on smaller screens */
+@media (max-width: 768px) {
+  .table-container {
+    max-width: 100%; /* Makes the table use full width on smaller screens */
   }
-  
-  /* Style the table itself */
-  .table-bordered {
-    border: 2px solid #28a745; /* Green border */
-  }
-  
-  .table th, .table td {
-    text-align: center; /* Center-align table text */
-    vertical-align: middle; /* Vertically center the content */
-    padding: 12px; /* Adds padding to cells for better readability */
-  }
-  
-  /* Header Style */
-  .table thead {
-    background-color: #28a745; /* Green background for header */
-    color: white; /* White text */
-  }
-  
-  /* Alternating row colors */
-  .table tbody tr:nth-child(even) {
-    background-color: #f8f9fa; /* Light gray background for even rows */
-  }
-  
-  .table tbody tr:nth-child(odd) {
-    background-color: #28a745; /* Green background for odd rows */
-    color: white; /* White text for odd rows */
-  }
-  
-  /* Hover effect for rows */
-  .table-hover tbody tr:hover {
-    background-color: #d4edda !important; /* Light green hover effect */
-  }
-  
-  /* Style for table borders */
-  .table-bordered th, .table-bordered td {
-    border: 1px solid #28a745; /* Green border for table cells */
-  }
-  
-  /* Additional styling to ensure the table looks nice on smaller screens */
-  @media (max-width: 768px) {
-    .table-container {
-      max-width: 100%; /* Makes the table use full width on smaller screens */
-    }
-  }
-  
+}
