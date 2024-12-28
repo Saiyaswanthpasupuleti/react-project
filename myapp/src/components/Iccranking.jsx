@@ -43,8 +43,9 @@ export default function Iccranking() {
   }, []); // Empty dependency array to run this effect once when the component mounts
 
   return (
+   
     <div className="container" style={{ maxWidth: '80%', marginTop: '30px' }}>
-      <h1>Icc Rankings 🏏</h1>
+      <h1 className='text-dark'>Icc Rankings 🏏</h1>
       {loading ? (
         <BootSpinner />
       ) : (

@@ -1,0 +1,30 @@
+/* Main container background */
+.upcoming-matches-container {
+    padding: 20px;
+  }
+  
+  /* Hover effect for the match cards */
+  .upcoming-matches {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect on the card */
+  .upcoming-matches:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: white; /* White text color on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box-shadow for lifted effect */
+  }
+  
+  /* Default card text color */
+  .upcoming-matches .card-body {
+    color: green; /* Default text color */
+  }
+  
+  /* Card title and subtitle colors */
+  .upcoming-matches .card-title,
+  .upcoming-matches .card-subtitle {
+    color: green; /* Default green color for title and subtitle */
+  }
+  
+  

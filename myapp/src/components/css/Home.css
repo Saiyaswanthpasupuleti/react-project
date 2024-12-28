@@ -11,12 +11,14 @@
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: box-shadow 0.3s ease; /* Smooth transition */
-    background-color: #ffffff; /* White background for cards */
+  
 }
 
 /* Hover effect for cards */
 .card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover effect for card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+   /* Hover effect for card */
+   
 }
 
 /* Card Title */
@@ -74,7 +76,7 @@ button:hover {
 
 /* Green and white cards theme */
 .card-body {
-    background-color: #ffffff; /* Ensure the card body background is white */
+    background-color: black; /* Ensure the card body background is white */
 }
 
 .card-title, .card-text {
@@ -85,3 +87,4 @@ button:hover {
 .card-text small {
     color: #888; /* Keep it muted for the smaller text */
 }
+

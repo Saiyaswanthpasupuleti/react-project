@@ -36,9 +36,9 @@ export default function Schedules() {
   }, []);
 
   return (
-    <div className="schedule-container" style={{ padding: "20px",display:"flex",height:"100vh",justifyContent:"space-evenly",alignItems:"center",flexDirection:"column" }}>
+    <div className="schedule-container" style={{ padding: "20px",display:"flex",height:"100vh",justifyContent:"space-evenly",alignItems:"center",flexDirection:"column",backgroundColor:"black" }}>
       <h3
-        className="text-center mb-4"
+        className="text-center mb-4 text-light" 
         style={{ color: "green", fontWeight: "bold" }}
       >
         Schedules 🏏

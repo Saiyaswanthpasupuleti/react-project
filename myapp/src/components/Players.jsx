@@ -37,8 +37,11 @@ export default function Players() {
   }, []);
 
   return (
+    <div style={{backgroundColor:"black"}}>
+
+    
     <div className="players-container" style={{ padding: '30px' }}>
-      <h3 className="text-center mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
+      <h3 className="text-center text-light mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
         Players 🏏
       </h3>
       {loading ? (
@@ -93,5 +96,6 @@ export default function Players() {
         </Row>
       )}
     </div>
+        </div>
   );
 }

@@ -31,9 +31,9 @@ export default function Series() {
   }, []);
 
   return (
-    <div className="series-container" style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",alignItems:"center",gap:"30px",height:"100vh"}}>
+    <div className="series-container" style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",alignItems:"center",gap:"30px",backgroundColor:"black",height:"100vh"}}>
 
-<h3 className="text-center mb-4 upcoming-title">Cricket Series 🏏</h3>
+<h3 className="text-center text-light mb-4 upcoming-title">Cricket Series 🏏</h3>
 
 <Link to="internationalseries" className="match-card upcoming-matches">
               International Series

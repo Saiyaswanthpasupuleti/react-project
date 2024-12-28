@@ -1,0 +1,87 @@
+/* Navbar brand styling */
+.brand-link {
+    text-decoration: none;
+   
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .brand-link:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    
+  }
+  
+  /* Aligning nav buttons */
+  .nav-buttons .nav-link {
+    display: inline-block;
+    width: 120px; /* Set uniform width for each button */
+    text-align: center; /* Center align the text */
+    padding: 10px 0; /* Add padding for a button-like feel */
+    margin: 0 5px; /* Add spacing between buttons */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for nav buttons */
+  .nav-buttons .nav-link:hover {
+    background-color: black; /* Change background color on hover */
+    color: black; /* Change text color to green on hover */
+    text-decoration: none; /* Remove underline on hover */
+    transform: scale(1.1); /* Add slight zoom effect */
+    border-radius: 30px;
+  }
+  
+  /* Add animated gradient background to the navbar */
+  .bg-success {
+   
+    animation: gradientAnimation 3s infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  
+  }
+  
+  /* Add subtle shadow for buttons */
+  .nav-buttons .nav-link {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-buttons .nav-link:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  }
+  
+  /* Responsive design: Adjust button sizes for smaller screens */
+  @media (max-width: 768px) {
+    .nav-buttons .nav-link {
+      width: 100%; /* Full width for smaller screens */
+      margin: 5px 0; /* Add margin between buttons */
+      font-size: 18px; /* Increase font size for better visibility */
+    }
+  }
+  
+  /* Add fade-in animation for navbar links */
+  .nav-buttons .nav-link {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards ease-in-out;
+    animation-delay: calc(0.1s * var(--index));
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

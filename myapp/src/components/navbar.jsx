@@ -3,19 +3,21 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom'; // Use Link from react-router-dom
+import './NavigationBar.css'; // Include CSS file for styling
 
 function NavigationBar() {
   return (
-    <Navbar expand="lg" className="bg-success text-light">
+    <Navbar expand="lg"  className="text-light shadow-lg" >
       <Container fluid>
         <Navbar.Brand className="text-warning">
-          <Link to="/" className="text-warning" style={{ textDecoration: "none", fontSize: "30px" }}>
+          <Link to="/" className="text-success brand-link">
             Cricbuzz
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          {/* Use ms-auto to align items to the right */}
+          <Nav className="ms-auto nav-buttons">
             <Link to="matches" className="nav-link text-light">
               Matches
             </Link>
@@ -35,12 +37,11 @@ function NavigationBar() {
               Players
             </Link>
             <Link to="iccranking" className="nav-link text-light">
-              Icc ranking
+              ICC Ranking
             </Link>
             <Link to="news" className="nav-link text-light">
               News
             </Link>
-            
           </Nav>
         </Navbar.Collapse>
       </Container>

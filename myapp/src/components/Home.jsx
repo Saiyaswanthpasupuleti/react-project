@@ -53,7 +53,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div style={{backgroundColor:"black"}}>
       <NavigationBar />
       <Routes>
         <Route path="matches/*" element={<Matches />} />
@@ -66,7 +66,7 @@ export default function Home() {
       </Routes>
 
       <div className="container mt-4">
-        <h1 className="text-center mb-4">Latest News 🏏</h1>
+        <h1 className="text-center text-success mb-4">Latest News 🏏</h1>
 
         {loading ? (
           <div className="d-flex justify-content-center">
@@ -82,9 +82,9 @@ export default function Home() {
               <div key={index} className="card mb-4">
                 <div className="card-body">
                   <h4 className="card-title text-success">{a.stories?.headline}</h4>
-                  <p className="card-text">{a.stories?.context }</p>
-                  <p className="card-text">
-                    <small className="text-muted">{a.stories?.intro}</small>
+                  <p className="card-text text-light">{a.stories?.context }</p>
+                  <p className="card-text  text-light">
+                    <small className="">{a.stories?.intro}</small>
                   </p>
                 </div>
               </div>

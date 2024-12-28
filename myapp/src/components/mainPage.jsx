@@ -26,6 +26,8 @@ import Players from "./Players";
 import Venues from "./Venues";
 import News from "./News";
 import Iccranking from "./Iccranking";
+import RecentMatches from "./RecentMatches";
+import LivesMatches from "./LivesMatches";
 
 
 
@@ -56,6 +58,9 @@ export function Mainfile(){
                 {/* <Route path="/home/matches" element={ <Matches/>} /> */}
                <Route path="/home/schedules" element={<Schedules/>}></Route>
                 <Route path="/home/matches/Upcomingmatches" element={ <UpcomingMatches/>} />
+                <Route path="/home/matches/recentmatches" element={ <RecentMatches/>} />
+                <Route path="/home/matches/livematches" element={ <LivesMatches/>} />
+                
                 <Route path="/home/matches" element={ <Matches/>} />
                 {/* <Route path="/home/teams" element={ <Teams/>} />
                 <Route path="/home/schedules" element={ <Schedules/>} /> */}
@@ -76,6 +81,7 @@ export function Mainfile(){
                 <Route path="/home/players" element={<Players/>}></Route>
                 <Route path="/home/venues" element={<Venues/>}></Route>
                 <Route path="/home/news" element={<News/>}></Route>
+                
                 
                 <Route path="/home/iccranking" element={<Iccranking/>}></Route>
                 
