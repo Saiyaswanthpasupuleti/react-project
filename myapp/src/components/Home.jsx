@@ -15,7 +15,6 @@ import BootSpinner from "./spinner"; // Import the spinner component
 import "./css/Home.css"; // Custom CSS for Home
 import Iccranking from "./Iccranking";
 
-
 export default function Home() {
   const [home, Sethome] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
@@ -32,7 +31,6 @@ export default function Home() {
         }
       };
       
-
       try {
         const response = await axios.request(options);
         console.log("API Response: ", response.data.homepage); // Log full response to inspect data
@@ -65,8 +63,8 @@ export default function Home() {
         <Route path="iccranking" element={<Iccranking/>} />
       </Routes>
 
-      <div className="container mt-4">
-        <h1 className="text-center text-success mb-4">Latest News 🏏</h1>
+      <div className="container mt-4 text-center"> {/* Add 'text-center' here */}
+        <h1 className="text-success mb-4">Latest News 🏏</h1>
 
         {loading ? (
           <div className="d-flex justify-content-center">
@@ -81,10 +79,10 @@ export default function Home() {
             home.map((a, index) => (
               <div key={index} className="card mb-4">
                 <div className="card-body">
-                  <h4 className="card-title text-success">{a.stories?.headline}</h4>
-                  <p className="card-text text-light">{a.stories?.context }</p>
-                  <p className="card-text  text-light">
-                    <small className="">{a.stories?.intro}</small>
+                  <h4 className="card-title text-success text-center">{a.stories?.headline}</h4> {/* Center text */}
+                  <p className="card-text text-light text-center">{a.stories?.context }</p> {/* Center text */}
+                  <p className="card-text text-light text-center">
+                    <small>{a.stories?.intro}</small> {/* Center text */}
                   </p>
                 </div>
               </div>

@@ -28,8 +28,8 @@
   
   /* Hover effect for nav buttons */
   .nav-buttons .nav-link:hover {
-    background-color: black; /* Change background color on hover */
-    color: black; /* Change text color to green on hover */
+   
+    
     text-decoration: none; /* Remove underline on hover */
     transform: scale(1.1); /* Add slight zoom effect */
     border-radius: 30px;

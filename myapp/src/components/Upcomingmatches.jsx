@@ -32,9 +32,9 @@ export default function UpcomingMatches() {
   }, []);
 
   return (
-    <div className="upcoming-matches-container" style={{ padding: "20px" }}>
+    <div className="upcoming-matches-container" style={{ padding: "20px",backgroundColor:"black" }}>
       <h3 className="text-center mb-4" style={{ color: "green", fontWeight: "bold" }}>
-        Upcoming Matches 🏏
+        Welcome to Upcoming Matches Page🏏
       </h3>
       {matches.length === 0 ? (
         <BootSpinner />
@@ -61,7 +61,7 @@ export default function UpcomingMatches() {
                     >
                       {match.seriesName}
                     </Card.Subtitle>
-                    <Card.Text>
+                    <Card.Text className="text-light">
                       <strong style={{ color: "green" }}>Venue:</strong>{" "}
                       {matchItem.matchVenue}
                       <br />

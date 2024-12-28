@@ -1,4 +1,9 @@
+body{
+  background-color: black;
+}
 /* Styling for the upcoming matches container */
+
+
 .upcoming-matches-container {
     padding: 20px;
     background-color: #f9f9f9; /* Light background for the container */

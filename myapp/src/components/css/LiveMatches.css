@@ -1,4 +1,7 @@
 /* Main container background */
+body{
+  background-color: black;
+}
 .upcoming-matches-container {
     padding: 20px;
   }
