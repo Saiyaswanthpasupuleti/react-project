@@ -14,8 +14,8 @@ function NavigationBar() {
             Cricbuzz
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle  className='text-success' aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle  className='text-light'  aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav"  >
           {/* Use ms-auto to align items to the right */}
           <Nav className="ms-auto nav-buttons">
             <Link to="matches" className="nav-link text-light">

@@ -85,3 +85,17 @@
     }
   }
   
+  /* Change navbar toggle button color to green */
+.navbar-toggler {
+  border-color: #27ae60; /* Green border for the toggle button */
+}
+
+.navbar-toggler-icon {
+  color: #27ae60; /* Green icon for the toggle button */
+}
+
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  color: #27ae60; 
+ 
+}
