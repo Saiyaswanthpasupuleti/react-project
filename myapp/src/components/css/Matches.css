@@ -80,7 +80,7 @@
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
-/* Hover effect for the back button */
+/* Hover effect for the Back button */
 .back-button:hover {
   background-color: #28a745; /* Green background on hover */
   color: white; /* White text color on hover */
@@ -88,7 +88,24 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Center the text inside the card */
-.match-card-text {
-  text-align: center;
+/* Home Button */
+.home-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #28a745; /* Green border */
+  background-color: black; /* Black background */
+  color: #28a745; /* Green text */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the Home button */
+.home-button:hover {
+  background-color: #28a745; /* Green background on hover */
+  color: white; /* White text color on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
