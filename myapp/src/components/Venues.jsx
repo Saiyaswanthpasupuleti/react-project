@@ -34,7 +34,7 @@ export default function Venues() {
 
   return (
     <div className="venues-container">
-      <h1 className="text-center mb-4 venues-title">Welcome to Venues Page🏏</h1>
+      <h1 className="text-center mb-4 venues-title text-success">Welcome to Venues Page🏏</h1>
       <div className="venues-list">
         {venue.map((a, index) => (
           <div key={index} className="venue-item">

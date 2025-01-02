@@ -1,8 +1,9 @@
 /* Style the table container */
 .table-container {
-  max-width: 80%; /* Keeps the table width within 80% of the screen */
+  max-width: 90%; /* Keeps the table width within 90% of the screen */
   margin: 30px auto; /* Centers the table and adds top margin */
   padding: 15px; /* Adds padding around the table */
+  overflow-x: auto; /* Ensures horizontal scrolling for smaller screens */
 }
 
 /* Style for the table itself */
@@ -41,9 +42,21 @@
   background-color: #444 !important; /* Darker background on hover */
 }
 
-/* Additional styling to ensure the table looks nice on smaller screens */
+/* Make the table more responsive on small screens */
 @media (max-width: 768px) {
+  /* Stack the table content for mobile devices */
+  .table th, .table td {
+    padding: 8px; /* Reduce padding for smaller devices */
+    font-size: 14px; /* Slightly smaller text for mobile */
+  }
+
+  /* Make the table scrollable horizontally */
   .table-container {
-    max-width: 100%; /* Makes the table use full width on smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  }
+
+  .table th, .table td {
+    white-space: nowrap; /* Prevent table content from wrapping */
   }
 }

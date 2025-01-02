@@ -37,19 +37,16 @@ export default function Players() {
   }, []);
 
   return (
-    <div style={{backgroundColor:"black"}}>
-
-    
-    <div className="players-container" style={{ padding: '30px' }}>
-      <h3 className="text-center text-success mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
+    <div style={{ backgroundColor: "black", padding: "30px" }}>
+      <h3 className="text-center text-success mb-4" style={{ fontWeight: 'bold' }}>
         Players 🏏
       </h3>
       {loading ? (
-        <BootSpinner/>
+        <BootSpinner />
       ) : (
-        <Row xs={1} md={2} lg={3} className="g-4">
+        <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
           {players.map((player, index) => (
-            <Col key={index} className="d-flex align-items-stretch">
+            <Col key={index} className="d-flex justify-content-center">
               <Card
                 style={{
                   border: '2px solid green',
@@ -58,12 +55,12 @@ export default function Players() {
                   overflow: 'hidden',
                   transition: 'transform 0.2s', // Add transition for hover effect
                 }}
-                className="player-card flex-grow-1" // Add a class for additional styling
+                className="player-card flex-grow-1 text-center" // Added text-center here
               >
-                <div style={{ textAlign: 'center', padding: '10px',backgroundColor:"black" }}>
+                <div style={{ textAlign: 'center', padding: '10px', backgroundColor: "black" }}>
                   <ShapeExample image={player.image} />
                 </div>
-                <Card.Body style={{ display: 'flex', flexDirection: 'column',backgroundColor:"black", justifyContent: 'space-between' }}>
+                <Card.Body style={{ display: 'flex', flexDirection: 'column', backgroundColor: "black", justifyContent: 'space-between' }}>
                   <Card.Title
                     style={{
                       color: 'green',
@@ -84,11 +81,12 @@ export default function Players() {
                     {player.Role}
                   </Card.Subtitle>
                   <Card.Text style={{ fontSize: '1rem' }}>
-                    <br/>
-                <p className='text-light'>    <strong style={{ color: 'green' }} >Role:</strong>{player.Role}</p>
-                 <p className='text-light'>  <strong style={{ color: 'green' }}>Player ID:</strong> {player.id}</p>
-                  
-                    <br />
+                    <p className='text-light'>
+                      <strong style={{ color: 'green' }}>Role:</strong>{player.Role}
+                    </p>
+                    <p className='text-light'>
+                      <strong style={{ color: 'green' }}>Player ID:</strong> {player.id}
+                    </p>
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -97,6 +95,5 @@ export default function Players() {
         </Row>
       )}
     </div>
-        </div>
   );
 }
