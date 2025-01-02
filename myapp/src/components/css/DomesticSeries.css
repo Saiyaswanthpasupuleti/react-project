@@ -1,71 +1,84 @@
 /* Main Container */
 .shared-container {
-    padding: 20px;
-    background-color: #f9f9f9; /* Neutral light background */
-  }
-  
-  /* Custom Grid */
-  .custom-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  /* Card Styling */
+  padding: 20px;
+  background-color: #f9f9f9; /* Neutral light background */
+}
+
+/* Custom Grid */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Card Styling */
+.custom-card {
+  background: #ffffff;
+  border: 2px solid #28a745; /* Green border to match theme */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover Effects */
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #28a745; /* Green title to match theme */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.series-info {
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #28a745; /* Match border color */
+}
+
+.text-light {
+  font-size: 0.9rem;
+  color: #555; /* Subtle gray text for descriptions */
+}
+
+/* Spinner Styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust based on your layout */
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
   .custom-card {
-    background: #ffffff;
-    border: 2px solid #28a745; /* Uniform border color for consistency */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.2s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  /* Hover Effects */
-  .custom-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Card Content */
-  .card-body {
-    padding: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    color: #007bff; /* Uniform blue color */
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .series-info {
-    margin-bottom: 10px;
-  }
-  
-  .card-subtitle {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .text-light {
     font-size: 0.9rem;
-    color: #555;
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 576px) {
-    .custom-card {
-      font-size: 0.9rem;
-    }
-  
-    .card-title {
-      font-size: 1rem;
-    }
+
+  .card-title {
+    font-size: 1rem;
   }
-  
+}

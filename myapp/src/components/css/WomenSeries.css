@@ -1,71 +1,70 @@
 /* Container Styling */
 .shared-container {
-    padding: 20px;
-    background-color: #f8f9fa; /* Light background for better readability */
-  }
-  
-  /* Custom Grid for Cards */
-  .custom-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Add spacing between the cards */
-    padding: 10px;
-  }
-  
-  /* Card Styling */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for better readability */
+}
+
+/* Custom Grid for Cards */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Add spacing between the cards */
+  padding: 10px;
+}
+
+/* Card Styling */
+.custom-card {
+  background: #ffffff; /* White card background */
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden; /* Ensures the content stays inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.custom-card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Card Content */
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #28a745;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.series-info {
+  margin-bottom: 15px; /* Add spacing between series info blocks */
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-light {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
   .custom-card {
-    background: #ffffff; /* White card background */
-    border: 2px solid #28a745; /* Green border */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden; /* Ensures the content stays inside the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  /* Hover effect */
-  .custom-card:hover {
-    transform: translateY(-5px); /* Slight upward movement */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-  }
-  
-  /* Card Content */
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    color: #28a745;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .series-info {
-    margin-bottom: 15px; /* Add spacing between series info blocks */
-  }
-  
-  .card-subtitle {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .text-light {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 576px) {
-    .custom-card {
       font-size: 0.9rem;
-    }
-  
-    .card-title {
-      font-size: 1rem;
-    }
   }
-  
+
+  .card-title {
+      font-size: 1rem;
+  }
+}

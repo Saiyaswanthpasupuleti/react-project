@@ -45,9 +45,11 @@ export default function WomenSeries() {
                   <div key={idx} className="series-info">
                     <p className="card-subtitle text-success">{b.seriesName}</p>
                     <p className="text-light">
+                      
                       <strong>Series Date:</strong> {b.seriesDate}
                       
                     </p>
+                    
                   </div>
                 ))}
               </div>

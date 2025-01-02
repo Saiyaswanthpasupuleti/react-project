@@ -31,26 +31,34 @@ export default function InternationalMatches() {
   }, []);
 
   return (
-    <div className="intl-match-card-container">
-      <h1 className="intl-matches-heading">International Matches 🏏</h1>
-      <div className="intl-card-wrapper">
+    <div className="shared-container">
+      <h1 className="text-center mb-4" style={{ color: "#28a745", fontWeight: "bold" }}>
+        International Matches 🏏
+      </h1>
+      <div className="custom-grid">
         {loading ? (
           <BootSpinner /> // Show spinner while loading
         ) : (
           intmatches.map((a, index) => (
-            <div key={index} className="intl-match-card">
-              <p className="intl-match-date">{a.date}</p>
-              {a.matchList.map((b, idx) => (
-                <div key={idx} className="intl-match-details">
-                  <h3>{b.seriesName}</h3>
-                  {b.seriesList?.map((c, id) => (
-                    <div key={id} className="intl-series-info">
-                      <h4>{c.seriesName}</h4>
-                      <p>{c.date}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
+            <div key={index} className="custom-card">
+              <div className="card-body">
+                <h4 className="card-title" style={{ color: "#28a745" }}>{a.date}</h4>
+                {a.matchList.map((b, idx) => (
+                  <div key={idx} className="series-info">
+                    <p className="card-subtitle text-success">{b.seriesName}</p>
+                    {b.seriesList?.map((c, id) => (
+                      <div key={id}>
+                        <p className="text-light">
+                          <strong>Series:</strong> {c.seriesName}
+                        </p>
+                        <p className="text-light">
+                          <strong>Date:</strong> {c.date}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           ))
         )}
