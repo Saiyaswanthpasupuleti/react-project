@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './css/LeaugeMatch.css'; // Make sure this CSS file is linked correctly
-import BootSpinner from './spinner';
+import BootSpinner from './spinner'; // Assuming you have this spinner component
 
 export default function Leaugematches() {
   const [leauge, Setleauge] = useState([]);
@@ -30,48 +30,45 @@ export default function Leaugematches() {
   }, []);
 
   return (
-    <div className="intl-match-card-container">
-      <h1 className="intl-matches-heading">League Matches 🏏</h1>
+    <div className="shared-container" style={{backgroundColor:"black"}}>
+      <h1 className="league-matches-heading">League Matches 🏏</h1>
+      <div className="custom-grid">
+        {!leauge.length ? (
+          <BootSpinner /> // Show spinner while loading
+        ) : (
+          <div className="custom-card-wrapper">
+            {leauge.map((a, index) => (
+              <div key={index} className="custom-card">
+                <div className="card-body">
+                  <h4 className="card-title">{a.date}</h4>
 
-      {/* Display Spinner if loading */}
-      {!leauge.length ? (
-        <BootSpinner/>
-      ) : (
-        <div className="intl-card-wrapper">
-          {leauge.map((a, index) => {
-            return (
-              <div key={index} className="intl-match-card">
-                <p>{a.date}</p>
-
-                {a.matchList.map((b, indexB) => {
-                  return (
-                    <div key={indexB} className="intl-match-details">
-                      <p className="intl-match-title">{b.seriesName}</p>
-                      {b.seriesList.map((c, indexC) => {
-                        return (
-                          <div key={indexC} className="intl-series-info">
-                            <h4>Format:</h4>
-                            <p>{c.matchFormat}</p>
-
-                            <h4>Match Title:</h4>
-                            <p>{c.matchTitle}</p>
-
-                            <h4>Series Name:</h4>
-                            <p>{c.seriesName}</p>
-
-                            <h4>Venue:</h4>
-                            <p className="intl-match-venue">{c.venue}</p>
-                          </div>
-                        );
-                      })}
+                  {a.matchList.map((b, indexB) => (
+                    <div key={indexB} className="series-info">
+                      <p className="card-subtitle text-success">{b.seriesName}</p>
+                      {b.seriesList.map((c, indexC) => (
+                        <div key={indexC}>
+                          <p className="text-light">
+                            <strong>Format:</strong> {c.matchFormat}
+                          </p>
+                          <p className="text-light">
+                            <strong>Match Title:</strong> {c.matchTitle}
+                          </p>
+                          <p className="text-light">
+                            <strong>Series Name:</strong> {c.seriesName}
+                          </p>
+                          <p className="text-light">
+                            <strong>Venue:</strong> {c.venue}
+                          </p>
+                        </div>
+                      ))}
                     </div>
-                  );
-                })}
+                  ))}
+                </div>
               </div>
-            );
-          })}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

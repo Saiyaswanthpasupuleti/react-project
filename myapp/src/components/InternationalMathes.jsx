@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "./css/InternationalMatches.css";
+import './css/InternationalMatches.css';
 import BootSpinner from './spinner'; // Importing the spinner component
 
 export default function InternationalMatches() {
@@ -31,20 +31,20 @@ export default function InternationalMatches() {
   }, []);
 
   return (
-    <div className="shared-container">
-      <h1 className="text-center mb-4" style={{ color: "#28a745", fontWeight: "bold" }}>
+    <div className="shared-container" style={{ backgroundColor: 'black' }}>
+      <h1 className="text-center mb-4" style={{ color: '#28a745', fontWeight: 'bold' }}>
         International Matches 🏏
       </h1>
-      <div className="custom-grid">
+      <div className="custom-grid" style={{backgroundColor:"black"}}>
         {loading ? (
           <BootSpinner /> // Show spinner while loading
         ) : (
           intmatches.map((a, index) => (
-            <div key={index} className="custom-card">
+            <div key={index} className="custom-card" style={{backgroundColor:"black"}}>
               <div className="card-body">
-                <h4 className="card-title" style={{ color: "#28a745" }}>{a.date}</h4>
+                <h4 className="card-title">{a.date}</h4>
                 {a.matchList.map((b, idx) => (
-                  <div key={idx} className="series-info">
+                  <div key={idx} className="series-info " >
                     <p className="card-subtitle text-success">{b.seriesName}</p>
                     {b.seriesList?.map((c, id) => (
                       <div key={id}>

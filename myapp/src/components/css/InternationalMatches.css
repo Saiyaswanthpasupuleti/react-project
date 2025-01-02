@@ -1,92 +1,93 @@
 /* Main container for the International Matches section */
-.intl-match-card-container {
-    margin: 20px;
-    padding: 20px;
+.shared-container {
+  padding: 20px;
+  background-color: black; /* Dark background */
+  color: white; /* Ensure text is white for readability */
+}
+
+/* Custom Grid for Cards */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Add spacing between the cards */
+  padding: 10px;
+}
+
+/* Card Styling */
+.custom-card {
+  background: #ffffff; /* White card background */
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden; /* Ensures the content stays inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.custom-card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Card Content */
+.card-body {
+  padding: 20px;
+  background-color: black; /* Ensure background inside card is black */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #28a745; /* Green color for title */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.series-info {
+  margin-bottom: 15px; /* Add spacing between series info blocks */
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #28a745; /* Green color for subtitle */
+}
+
+.text-light {
+  font-size: 0.9rem;
+  color: #bbb; /* Light grey for less emphasis */
+}
+
+/* Spinner container styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust based on your layout */
+}
+
+/* Customize spinner if needed */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .custom-card {
+    font-size: 0.9rem;
   }
-  
-  /* Heading for the International Matches */
-  .intl-matches-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #007b3a; /* Dark green */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Wrapper for the match cards */
-  .intl-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 40px;
-  }
-  
-  /* Style for each individual match card */
-  .intl-match-card {
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1); /* Subtle shadow */
-    text-align: left;
-  }
-  
-  /* Match details */
-  .intl-match-details p {
-    font-size: 1.1rem;
-    margin: 5px 0;
-  }
-  
-  .intl-match-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .intl-match-venue {
-    color: #2c6f2f;
+
+  .card-title {
     font-size: 1rem;
   }
-  
-  /* Spinner container styles */
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px; /* Adjust based on your layout */
+}
+
+@media (max-width: 576px) {
+  .custom-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Customize spinner if needed */
-  .spinner-border {
-    width: 3rem;
-    height: 3rem;
-    border-width: 0.25rem;
-  }
-  
-  /* International Series Info */
-  .intl-series-info h4 {
-    color: #006400; /* Dark green */
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .intl-series-info p {
-    color: #333; /* Dark text for better readability */
-    font-size: 1rem;
-    margin-bottom: 5px;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .intl-match-card {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .intl-card-wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+}

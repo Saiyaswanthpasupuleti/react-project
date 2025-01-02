@@ -1,86 +1,111 @@
 /* Main container for Women Matches */
-.women-matches-container {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff; /* White background for a clean and neutral look */
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1); /* Subtle dark green shadow */
-    max-width: 1200px;
+.shared-container {
+  padding: 20px;
+  background-color: #121212; /* Dark background for contrast */
+  color: white; /* Ensure text is white for readability */
+  min-height: 100vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Heading for Women Matches */
-.women-matches-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #007b3a; /* Dark green */
-    text-align: center;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+.custom-grid-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #28a745; /* Green color */
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Wrapper for matches */
-.women-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Custom grid layout for match cards */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
 }
 
-/* Individual match card styling */
-.women-match-card {
-    padding: 15px;
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1); /* Subtle dark green shadow */
+/* Card container styles */
+.custom-card {
+  background: #1e1e1e;
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Match details */
-.women-match-details {
-    font-size: 1rem;
-    color: #333; /* Dark text for better readability */
-    margin: 5px 0;
+/* Hover effect for card */
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.women-match-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #2c6f2f; /* Medium green */
+/* Card body */
+.card-body {
+  padding: 20px;
+  background-color: #121212;
 }
 
-.women-match-venue {
-    font-size: 1rem;
-    color: #006400; /* Dark green */
+.card-title {
+  font-size: 1.2rem;
+  color: #28a745;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-/* Series list styling */
-.series-list {
-    margin-top: 10px;
-    padding-left: 20px;
+.series-info {
+  margin-bottom: 15px;
 }
 
-.series-item {
-    list-style-type: square;
-    margin-bottom: 10px;
-    color: #2c6f2f; /* Medium green */
+.card-subtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 10px;
 }
 
-/* Responsive styling */
+.text-light {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 5px 0;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+/* Spinner styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25rem;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .women-matches-container {
-        padding: 15px;
-    }
+  .custom-card {
+    font-size: 0.9rem;
+  }
 
-    .women-match-card {
-        padding: 10px;
-    }
-
-    .women-matches-heading {
-        font-size: 2rem;
-    }
+  .card-title {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .women-card-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
 }

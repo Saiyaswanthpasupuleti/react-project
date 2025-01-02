@@ -77,7 +77,7 @@ export default function Schedules() {
       <Link to="domesticmatches" className="match-card upcoming-matches">
         Domestic Matches
       </Link>
-      <Link to="leaguematches" className="match-card upcoming-matches">
+      <Link to="leaugematches" className="match-card upcoming-matches">
         League Matches
       </Link>
       <Link to="womenmatches" className="match-card upcoming-matches">

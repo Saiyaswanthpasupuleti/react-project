@@ -1,62 +1,104 @@
-/* Container for the domestic matches */
-.domestic-match-container {
-    margin: 20px;
-    padding: 20px;
+/* Main container for the Domestic Matches section */
+.shared-container {
+  padding: 20px;
+  background-color: black; /* Dark background */
+  color: white; /* Ensure text is white for readability */
+  min-height: 100vh;
+}
+
+/* Heading for Domestic Matches */
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 30px;
+}
+
+/* Custom Grid for Cards */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Add spacing between the cards */
+  padding: 10px;
+}
+
+/* Card Styling */
+.custom-card {
+  background: #1e1e1e; /* Dark card background */
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.custom-card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Card Content */
+.card-body {
+  padding: 20px;
+  background-color: black; /* Ensure background inside card is black */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #28a745; /* Green color for title */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.match-details {
+  margin-bottom: 15px; /* Add spacing between match details */
+}
+
+.card-subtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #28a745; /* Green color for subtitle */
+  margin-bottom: 10px;
+}
+
+.match-info p {
+  font-size: 0.9rem;
+  color: #bbb; /* Light grey for less emphasis */
+}
+
+/* Spinner container styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust based on your layout */
+}
+
+/* Customize spinner if needed */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .custom-card {
+    font-size: 0.9rem;
   }
-  
-  /* Heading for the Domestic Matches */
-  .domestic-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2e7d32;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Wrapper for match cards */
-  .domestic-match-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 40px;
-  }
-  
-  /* Match card styles */
-  .domestic-match-card {
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  /* Match details */
-  .match-details p {
-    font-size: 1.1rem;
-    margin: 5px 0;
-  }
-  
-  .match-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .match-venue {
-    color: #2c6f2f;
+
+  .card-title {
     font-size: 1rem;
   }
-  
-  /* Spinner container styles */
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px; /* Adjust based on your layout */
+}
+
+@media (max-width: 576px) {
+  .custom-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Customize spinner if needed */
-  .spinner-border {
-    width: 3rem;
-    height: 3rem;
-    border-width: 0.25rem;
-  }
-  
+}

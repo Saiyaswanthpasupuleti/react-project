@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './css/WomenMatches.css';
+import './css/WomenMatches.css'; // Import the CSS file
+import BootSpinner from './spinner';
 
 export default function WomenMatches() {
   const [women, setWomen] = useState([]);
+  const [loading, setLoading] = useState(true); // State to track loading status
 
   useEffect(() => {
     const handleWomenMatch = async () => {
@@ -20,8 +22,10 @@ export default function WomenMatches() {
         const response = await axios.request(options);
         console.log(response.data);
         setWomen(response.data.response.schedules || []);
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error('Error fetching women matches:', error);
+        setLoading(false); // Set loading to false in case of an error
       }
     };
 
@@ -29,29 +33,41 @@ export default function WomenMatches() {
   }, []);
 
   return (
-    <div className="women-matches-container">
-      <h1 className="women-matches-heading">Women Matches 🏏</h1>
-      <div className="women-card-wrapper">
-        {women.map((a, index) => (
-          <div key={index} className="women-match-card">
-            <p>{a.date}</p>
-            <div className="series-list">
-              {a.matchList.map((b, idx) => (
-                <div key={idx} className="women-match-details">
-                  <p className="women-match-title">{b.seriesName}</p>
-                  {b.seriesList.map((c, idz) => (
-                    <div key={idz}>
-                      <p>Format: {c.matchFormat}</p>
-                      <p>Match Title: {c.matchTitle}</p>
-                      <p>Series Name: {c.seriesName}</p>
-                      <p>Venue: {c.venue}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
+    <div className="shared-container" style={{backgroundColor:"black"}}>
+      <h1 className="custom-grid-heading">Women Matches 🏏</h1>
+      <div className="custom-grid">
+        {loading ? (
+          <div className="spinner-container">
+            {/* Add your spinner here if needed */}
+          <BootSpinner/>
           </div>
-        ))}
+        ) : (
+          women.map((a, index) => (
+            <div key={index} className="custom-card">
+              <div className="card-body">
+                <h4 className="card-title">{a.date}</h4>
+                {a.matchList.map((b, idx) => (
+                  <div key={idx} className="series-info">
+                    <p className="card-subtitle text-success">{b.seriesName}</p>
+                    {b.seriesList.map((c, id) => (
+                      <div key={id}>
+                        <p className="text-light">
+                          <strong>Match Title:</strong> {c.matchTitle}
+                        </p>
+                        <p className="text-light">
+                          <strong>Venue:</strong> {c.venue}
+                        </p>
+                        <p className="text-success">
+                          <strong>Date:</strong> {c.date}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
