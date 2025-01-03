@@ -49,10 +49,10 @@ export default function InternationalMatches() {
                     {b.seriesList?.map((c, id) => (
                       <div key={id}>
                         <p className="text-light">
-                          <strong>Series:</strong> {c.seriesName}
+                          <strong className='text-success'>Series:</strong> {c.seriesName}
                         </p>
                         <p className="text-light">
-                          <strong>Date:</strong> {c.date}
+                          <strong className='text-success'>Date:</strong> {c.date}
                         </p>
                       </div>
                     ))}

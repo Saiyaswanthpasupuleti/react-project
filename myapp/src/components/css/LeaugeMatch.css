@@ -1,92 +1,80 @@
-/* Main container for the League Matches section */
+/* Main container */
 .shared-container {
   padding: 20px;
-  background-color: #121212; /* Dark background */
-  color: white; /* Ensure text is white for readability */
+  background-color: #1f1f1f; /* Slightly lighter than black */
+  color: #fff;
+  border-radius: 8px;
   min-height: 100vh;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Heading for the League Matches */
+/* Heading for the page */
 .league-matches-heading {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #28a745; /* Green color */
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  color: #ffcc00; /* Bright yellow for better contrast */
+  margin-bottom: 20px;
 }
 
-/* Custom Grid for Cards */
+/* Grid Layout */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px; /* Add spacing between the cards */
-  padding: 10px;
+  gap: 15px;
 }
 
-/* Card Styling */
+/* Individual Card */
 .custom-card {
-  background: #1e1e1e; /* Dark background for the card */
-  border: 2px solid #28a745; /* Green border */
+  background: #2c2c2c;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden; /* Ensures the content stays inside the card */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Hover effect for the card */
 .custom-card:hover {
-  transform: translateY(-5px); /* Slight upward movement */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Card Content */
 .card-body {
-  padding: 20px;
-  background-color: #121212; /* Dark background inside card */
-  color: white; /* Text inside card is white */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .card-title {
   font-size: 1.2rem;
-  color: #28a745; /* Green color for title */
-  margin-bottom: 10px;
-  font-weight: bold;
+  color: #ffcc00; /* Bright yellow for titles */
 }
 
 .series-info {
-  margin-bottom: 15px; /* Add spacing between series info blocks */
+  margin-top: 10px;
 }
 
 .card-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #28a745; /* Green color for subtitle */
+  color: #ffcc00;
 }
 
 .text-light {
   font-size: 0.9rem;
-  color: #bbb; /* Light grey for less emphasis */
+  color: #ddd;
 }
 
-/* Spinner styles */
+.match-details {
+  margin-top: 5px;
+  padding-left: 10px;
+  border-left: 2px solid #28a745; /* Left border for visual separation */
+}
+
+/* Spinner container */
 .spinner-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Adjust based on your layout */
-}
-
-/* Customize spinner if needed */
-.spinner-border {
-  width: 3rem;
-  height: 3rem;
-  border-width: 0.25rem;
+  height: 200px;
 }
 
 /* Responsive Adjustments */

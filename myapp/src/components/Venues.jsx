@@ -39,8 +39,8 @@ export default function Venues() {
         {venue.map((a, index) => (
           <div key={index} className="venue-item">
             <ShapeExample image={a.image} />
-            <p className="venue-name text-success" style={{fontSize:"17px"}}>Name: {a.name}</p>
-            <p className="venue-place text-light">Place: {a.place}</p>
+            <p className="venue-name text-success" style={{fontSize:"17px"}}> {a.name}</p>
+            <p className="venue-place text-light"><strong className='text-success'>Place:</strong> {a.place}</p>
           </div>
         ))}
       </div>

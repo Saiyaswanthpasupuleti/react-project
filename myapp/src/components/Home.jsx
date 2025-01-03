@@ -26,7 +26,7 @@ export default function Home() {
         method: 'GET',
         url: 'https://crickbuzz-official-apis.p.rapidapi.com/home',
         headers: {
-          'x-rapidapi-key': '07a690c8b6msha638ae486882591p1480a2jsn2aa2d018c153',
+          'x-rapidapi-key': '7ae981e42amsh872b0f8b9fa9783p1d2701jsn96e941a8c85f',
           'x-rapidapi-host': 'crickbuzz-official-apis.p.rapidapi.com'
         }
       };

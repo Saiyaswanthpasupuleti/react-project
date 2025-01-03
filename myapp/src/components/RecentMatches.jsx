@@ -60,16 +60,16 @@ export default function RecentMatches() {
                       {match.seriesName}
                     </Card.Subtitle>
                     <Card.Text className='text-light'>
-                      <strong style={{ color: "green" }}>Venue:</strong>{" "}
+                      <strong className='text-success'>Venue:</strong>{" "}
                       {matchItem.matchVenue}
                       <br />
-                      <strong style={{ color: "green" }}>Date:</strong>{" "}
+                      <strong  className='text-success' >Date:</strong>{" "}
                       {matchItem.matchDate}
                       <br />
-                      <strong style={{ color: "green" }}>Time:</strong>{" "}
+                      <strong className='text-success'>Time:</strong>{" "}
                       {matchItem.matchTime}
                       <br />
-                      <strong style={{ color: "green" }}>Status:</strong>{" "}
+                      <strong className='text-success'>Status:</strong>{" "}
                       {matchItem.currentStatus}
                     </Card.Text>
                   </Card.Body>

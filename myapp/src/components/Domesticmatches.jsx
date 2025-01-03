@@ -32,34 +32,31 @@ export default function Domesticmatches() {
 
   return (
     <div className="shared-container" style={{ backgroundColor: 'black' }}>
-      <h1 className="text-center mb-4" style={{ color: '#28a745', fontWeight: 'bold' }}>
-        Domestic Matches 🏏
-      </h1>
-      <div className="custom-grid" style={{ backgroundColor: 'black' }}>
+      <h1 className="league-matches-heading text-success">Domestic Matches 🏏</h1>
+      <div className="custom-grid">
         {loading ? (
           <div className="spinner-container">
             <BootSpinner /> {/* Show spinner while loading */}
           </div>
         ) : (
           domestic.map((a, index) => (
-            <div key={index} className="custom-card" style={{ backgroundColor: 'black' }}>
+            <div key={index} className="custom-card">
               <div className="card-body">
                 <h4 className="card-title">{a.date}</h4>
                 {a.matchList.map((b, idx) => (
-                  <div key={idx} className="match-details">
+                  <div key={idx} className="series-info">
                     <p className="card-subtitle text-success">{b.seriesName}</p>
                     {b.seriesList.map((c, id) => (
-                      <div key={id} className="match-info">
+                      <div key={id} className="match-details">
                         <p className="text-light">
-                          <strong>Match Title:</strong> {c.matchTitle}
+                          <strong className="text-success">Match Title:</strong> {c.matchTitle}
                         </p>
                         <p className="text-light">
-                          <strong>Venue:</strong> {c.venue}
+                          <strong className="text-success">Venue:</strong> {c.venue}
                         </p>
-                        <p className="text-success">
-                          <strong>Date:</strong> {c.date}
+                        <p className="text-light">
+                          <strong className="text-success">Date:</strong> {c.date}
                         </p>
-                        
                       </div>
                     ))}
                   </div>

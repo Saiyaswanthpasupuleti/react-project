@@ -52,13 +52,13 @@ export default function WomenMatches() {
                     {b.seriesList.map((c, id) => (
                       <div key={id}>
                         <p className="text-light">
-                          <strong>Match Title:</strong> {c.matchTitle}
+                          <strong className='text-success'>Match Title:</strong> {c.matchTitle}
                         </p>
                         <p className="text-light">
-                          <strong>Venue:</strong> {c.venue}
+                          <strong className='text-success'>Venue:</strong> {c.venue}
                         </p>
-                        <p className="text-success">
-                          <strong>Date:</strong> {c.date}
+                        <p >
+                          <strong className='text-success'>Date:</strong> {c.date}
                         </p>
                       </div>
                     ))}
